@@ -1,0 +1,56 @@
+.navbar-default .navbar-brand {
+  color: $main_color;
+  font-size: 28px;
+}
+.navbar-default{
+  font-size: 16px;
+}
+
+.navbar-default .navbar-brand:after {
+  content: 'REONT';
+  color: #ffffff;
+}
+
+@media(min-width: 768px) {
+  .navbar-default {
+    background-color: transparent;
+    padding: 25px 0;
+    -webkit-transition: padding 0.3s;
+    -moz-transition: padding 0.3s;
+    transition: padding 0.3s;
+    border: none;
+
+    .navbar-brand {
+      font-size: 36px;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    .navbar-nav > .active > a {
+      border-radius: 0px;
+    }
+  }
+
+  .navbar-default.affix {
+    background-color: rgb(95, 95, 95);
+    padding: 10px 0;
+    -webkit-transition: all 0.8s;
+    -moz-transition: all 0.8s;
+    transition: all 0.8s;
+
+    .navbar-brand {
+      font-size: 2.0em;
+    }
+  }
+}
+
+.navbar-custom .navbar-nav>.active>a {
+  border-radius: 0;
+  color: #fff;
+  background-color: $main_color;
+}
+.navbar-custom  .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+  color: #ffffff;
+  background-color: $main_color;
+}

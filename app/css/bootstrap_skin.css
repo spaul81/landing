@@ -1,0 +1,21 @@
+.btn {
+  border-radius: 0; }
+
+.carousel .item {
+  height: 500px;
+  background-color: #777; }
+
+.navbar-default {
+  background-color: transparent;
+  border: none; }
+
+.navbar-default .navbar-nav > li > a {
+  color: #ffffff; }
+
+.navbar-default .navbar-nav > li > a:focus, .navbar-default .navbar-nav > li > a:hover {
+  color: #ff5f67;
+  background-color: transparent; }
+
+.navbar-default .navbar-brand:focus, .navbar-default .navbar-brand:hover {
+  color: #ff5f67;
+  background-color: transparent; }

@@ -1,0 +1,4 @@
+app/img/*.*
+node_modules/
+.idea/
+app/vendor/

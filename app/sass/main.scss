@@ -1,0 +1,119 @@
+@import "variables";
+@import "bootstrap_skin";
+@import "loader";
+@import "navbar";
+
+.text-primary {
+  color: $main_color;
+}
+
+a {
+  color: $main_color;
+}
+
+body {
+  color: #444444;
+}
+
+a {
+  outline: 0;
+  text-decoration: none;
+  background-color: transparent;
+  transition-property: background-color, box-shadow, border, color, opacity, transform;
+  transition-duration: 0.3s;
+}
+
+// Section
+@media (min-width: 768px) {
+  section {
+    padding: 40px 0;
+  }
+}
+// H3
+section h3.section-subheading {
+  font-size: 16px;
+  text-transform: none;
+  font-weight: 400;
+  margin-bottom: 75px;
+}
+
+// Scroll to Top
+
+.scroll-top {
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  text-align: center;
+  font-size: 20px;
+  background: rgba(#666666, .5);
+
+  color: #fff;
+  z-index: 99;
+  display: none;
+  transition: none;
+  -o-transition: none;
+  -moz-transition: none;
+  -webkit-transition: none;
+  border-radius: 50%;
+
+  transition-property: background-color, box-shadow, border, color, opacity, transform;
+  transition-duration: 0.5s;
+}
+
+.scroll-top:hover {
+  background: $main_color;
+  text-decoration: none;
+  color: #fff;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  bottom: 20px;
+  right: 20px;
+  //box-shadow: 0 0 5px rgba(0,0,0,0.5);
+  //border: solid 1px #ffffff;
+}
+
+@media (max-width: 768px) {
+  .scroll-top {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+// Swiper
+.swiper-container {
+  cursor: pointer;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 600px;
+}
+
+.swiper-slide {
+  background-position: top;
+  background-size: cover;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 18px;
+  color: #fff;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  height: 25px;
+  margin: 20px;
+  opacity: .5;
+}
+
+//Portfolio
+.bg-main-color {
+  background-color: $main_color;
+  color: whitesmoke;
+
+}
+.bg-main-color h3 {
+  color: whitesmoke;
+}
