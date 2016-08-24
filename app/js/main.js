@@ -21,9 +21,13 @@ $(window).on('load', function () {
 
     })
 
+    mySwiper.on('onSlidePrevStart', function () {
+        $('.animatedSlider').toggleClass('animated fadeInUp visible');
+    });
     mySwiper.on('onSlideNextStart', function () {
         $('.animatedSlider').toggleClass('animated fadeInUp visible');
     });
+
 });
 
 // Sickly Header | scrollTop
