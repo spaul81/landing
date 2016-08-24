@@ -1,11 +1,14 @@
+.navbar-custom{
+  font-family: "Roboto";
+  font-weight: 300;
+  font-style: normal;
+  font-size: 18px;
+ }
+
 .navbar-default .navbar-brand {
   color: $main_color;
   font-size: 28px;
 }
-.navbar-default{
-  font-size: 16px;
-}
-
 .navbar-default .navbar-brand:after {
   content: 'REONT';
   color: #ffffff;

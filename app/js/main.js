@@ -7,11 +7,11 @@ $(window).on('load', function () {
     var mySwiper = new Swiper('.swiper-container', {
         // Optional parameters
         direction: 'horizontal',
-        speed: 1000,
+        speed: 500,
         //spaceBetween: 5600,
         loop: true,
-        autoplay: 5600,
-        effect: 'swipe',
+        autoplay: 4600,
+        effect: 'fade',
         fade: {
             crossFade: true
         },
@@ -20,12 +20,17 @@ $(window).on('load', function () {
         autoplayDisableOnInteraction: false
 
     })
+
+    mySwiper.on('onSlideNextStart', function () {
+        $('.animatedSlider').toggleClass('animated fadeInUp visible');
+    });
 });
 
 // Sickly Header | scrollTop
 $(document).ready(function () {
 
     "use strict"; // Start of use strict
+
 
     // jQuery for page scrolling feature - requires jQuery Easing plugin
     $('a.page-scroll').bind('click', function (event) {
