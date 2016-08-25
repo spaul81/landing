@@ -28,6 +28,14 @@ $(window).on('load', function () {
         $('.animatedSlider').toggleClass('animated fadeInUp visible');
     });
 
+    function setHeiHeight() {
+        $('.swiper-container').css({
+            height: $(window).height() + 'px'
+        });
+    }
+    setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
+    $(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
+
 });
 
 // Sickly Header | scrollTop
@@ -47,14 +55,14 @@ $(document).ready(function () {
 
     // Highlight the top nav as scrolling occurs
     $('body').scrollspy({
-        target: '.navbar-fixed-top',
-        offset: 51
+        target: '.navbar-custom',
+        offset: 100
     });
 
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
-            top: 100
+            top: 600
         }
     });
 

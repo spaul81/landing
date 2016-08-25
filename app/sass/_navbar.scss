@@ -1,21 +1,39 @@
-.navbar-custom{
-  font-family: "Roboto";
+.navbar-custom {
+  font-family: "Roboto", Raleway, Helvetica, Arial !important;
   font-weight: 300;
   font-style: normal;
-  font-size: 18px;
- }
+  font-size: 16px;
+  //position: absolute;
+}
+
+.navbar-custom {
+  position: absolute;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+
+.navbar-custom.affix {
+  position: fixed;
+}
 
 .navbar-default .navbar-brand {
   color: $main_color;
   font-size: 28px;
 }
-.navbar-default .navbar-brand:after {
+
+.navbar-custom .navbar-brand:after {
   content: 'REONT';
   color: #ffffff;
 }
 
+.navbar-custom.affix .navbar-brand:after {
+  content: 'REONT';
+  color: #363636;
+}
+
 @media(min-width: 768px) {
-  .navbar-default {
+  .navbar-custom {
     background-color: transparent;
     padding: 25px 0;
     -webkit-transition: padding 0.3s;
@@ -35,25 +53,44 @@
     }
   }
 
-  .navbar-default.affix {
-    background-color: rgb(95, 95, 95);
+  .navbar-custom.affix {
+    background-color: rgba(255, 255, 255, 0.95);
     padding: 10px 0;
-    -webkit-transition: all 0.8s;
-    -moz-transition: all 0.8s;
-    transition: all 0.8s;
+    -webkit-transition: all 0.5s;
+    -moz-transition: all 0.5s;
+    transition: all 0.5s;
+    color: #555555;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.05);
 
     .navbar-brand {
-      font-size: 2.0em;
+      font-size: 1.5em;
     }
   }
 }
 
-.navbar-custom .navbar-nav>.active>a {
+.navbar-custom .navbar-nav > .active > a {
   border-radius: 0;
   color: #fff;
   background-color: $main_color;
 }
-.navbar-custom  .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:focus, .navbar-default .navbar-nav>.active>a:hover {
+
+.navbar-custom .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
+  color: #ffffff;
+  background-color: $main_color;
+}
+
+.navbar-custom.affix .navbar-nav > li > a {
+  color: #555555;
+}
+
+.navbar-custom.affix .navbar-nav > li > a:hover {
+  color: $main_color;
+}
+.navbar-custom.affix .navbar-nav > .active >a:hover{
+  color: #ffffff;
+}
+
+.navbar-custom.affix .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:focus, .navbar-default .navbar-nav > .active > a:hover {
   color: #ffffff;
   background-color: $main_color;
 }
