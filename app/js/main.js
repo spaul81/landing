@@ -1,5 +1,7 @@
 // Loader
 $(window).on('load', function () {
+
+    // PreLoader
     var $preloader = $('.loader-box');
     $preloader.delay(300).fadeOut('slow');
 

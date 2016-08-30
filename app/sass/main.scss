@@ -2,6 +2,7 @@
 @import "bootstrap_skin";
 @import "loader";
 @import "navbar";
+@import "space"; // Margin Helper
 
 .text-primary {
   color: $main_color;
@@ -12,7 +13,7 @@ a {
 }
 
 body {
-  color: #444444;
+  color: $text_color;
 }
 
 a {
@@ -23,10 +24,15 @@ a {
   transition-duration: 0.3s;
 }
 
+.colored {
+  color: $main_color;
+}
+
 // Section
 @media (min-width: 768px) {
   section {
-    padding: 40px 0;
+  //  padding: 40px 0;
+
   }
 }
 
@@ -35,7 +41,65 @@ section h3.section-subheading {
   font-size: 16px;
   text-transform: none;
   font-weight: 400;
-  margin-bottom: 75px;
+}
+
+section h2.section-heading {
+  margin-bottom: 45px;
+
+}
+
+section h2.section-heading:after {
+  position: relative;
+  content: '';
+  bottom: -25px;
+  width: 30px;
+  height: 1px;
+  margin: 0 auto;
+  display: block;
+  background-color: $text_color;
+}
+
+section.bg-main-color h2.section-heading:after {
+  background-color: whitesmoke;
+}
+
+.progress {
+
+
+  border-radius: 0px;
+  box-shadow: none;
+}
+.progress-bar {
+  background-color: $main_color;
+  box-shadow: none;
+}
+
+// Section Bg
+.bg-overlay1 {
+  position: absolute !important;
+  display: block;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.20);
+}
+.white-text{
+  color: white;
+}
+#bg1{
+  position: relative;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../img/background22.jpg) !important;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+}
+html{
+ // min-height: 100%;
 }
 
 // Scroll to Top
@@ -138,14 +202,16 @@ section h3.section-subheading {
 
 .dark-button, .dark-button:focus {
   color: white !important;
-  background: rgba(76, 76, 76, 0.1);
+  //
+  //background: rgba(76, 76, 76, 0.1);
+  background-color: $main_color;
   border: 1px solid rgba(255, 255, 255, 0.1);
   text-decoration: none;
   padding: 8px 22px;
   display: inline-block;
   letter-spacing: 1px;
   font-size: 14px;
-  font-width:100;
+  font-width: 100;
   font-family: "Roboto", Raleway, Helvetica, Arial !important;
 
 }
@@ -162,7 +228,8 @@ section h3.section-subheading {
   height: auto;
   max-width: 1200px;
   position: relative;
-  margin: 0 auto;
+ // margin: 0 auto;
+  text-align: center;
 }
 
 .swiper-inner h3 {
@@ -185,7 +252,7 @@ section h3.section-subheading {
   visibility: visible;
 }
 
-.swiper-inner h3, h2, p {
+.swiper-inner h3, .swiper-inner h2, .swiper-inner p {
   font-family: "Roboto", Raleway, Helvetica, Arial !important;
   font-weight: 100;
   font-style: normal;
@@ -213,4 +280,41 @@ section h3.section-subheading {
 
 .bg-main-color h3 {
   color: whitesmoke;
+}
+
+// Footer
+footer {
+  padding: 20px 0;
+  text-align: center;
+  background-color: #2b2c36;
+}
+
+footer span.copyright {
+  line-height: 35px;
+  text-transform: uppercase;
+  text-transform: none;
+  color: #cccccc;
+}
+
+footer ul.social-buttons {
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 35px;
+}
+
+footer ul.social-buttons a:hover, footer ul.social-buttons a:focus {
+  color: rgba($main_color, 1);
+}
+
+footer ul.social-buttons a {
+  color: #cccccc;
+}
+
+@media(min-width: 768px) {
+  footer span.copyright {
+    float: left;
+  }
+  footer ul.social-buttons {
+    float: right;
+  }
 }
