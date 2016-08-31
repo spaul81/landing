@@ -20,7 +20,8 @@
     "gulp-sass": "^2.3.2",
     "gulp-uglify": "^2.0.0",
     "jquery": "^3.1.0",
-    "node-font-awesome": "^1.0.2"
+    "node-font-awesome": "^1.0.2",
+    "swiper": "^3.3.1"
   },
   "dependencies": {
     "create-file": "^1.0.1"

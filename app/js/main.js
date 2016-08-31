@@ -35,8 +35,9 @@ $(window).on('load', function () {
             height: $(window).height() + 'px'
         });
     }
+
     setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
-    $(window).resize( setHeiHeight ); // обновляем при изменении размеров окна
+    $(window).resize(setHeiHeight); // обновляем при изменении размеров окна
 
 });
 
@@ -64,17 +65,45 @@ $(document).ready(function () {
     // Offset for Main Navigation
     $('#mainNav').affix({
         offset: {
-            top: 600
+            top: 100
         }
     });
 
 //scrollTop
     $(window).scroll(
         function () {
+            scrollAnimation();
             $(this).scrollTop() > 500 ? $(".scroll-top").fadeIn() : $(".scroll-top").fadeOut().blur()
             $(this).scrollTop() < 10 ? $(".nav a, .navbar-brand").blur() : '' //Leave focus if scroll top
         }),
         $(".scroll-top").click(function () {
             return $("html, body").animate({scrollTop: 0}, 700), !1
         }).blur();
+
+
+    $('.is-animated').each(function () {
+        $(this).addClass("is-hidden");
+        $(this).css({'animation-name': 'none'});
+        console.log('added');
+    });
+
 });
+
+
+$.fn.isOnScreen = function () {
+    var element = this.get(0);
+    var bounds = element.getBoundingClientRect();
+    return bounds.top < window.innerHeight && bounds.bottom > 0;
+};
+
+function scrollAnimation() {
+    $('.is-animated').each(function () {
+        var posIsOnScreen = $(this).isOnScreen();
+        if (posIsOnScreen) {
+            //$(this).removeAttr('style');
+            $(this).css({'animation-name': '', 'animationDelay' : '.1s'});
+            $(this).removeClass('is-hidden');
+            $(this).addClass('is-visible animated ');
+        }
+    });
+}

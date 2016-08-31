@@ -10,7 +10,7 @@ var createFile = require('create-file');
 var autoprefixer = require('gulp-autoprefixer');
 
 // Default task
-gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy', 'clean-folders']);
+gulp.task('default', ['sass', 'minify-css', 'minify-js', 'copy']);
 
 // Create clean folders
 gulp.task('clean-folders', function () {
@@ -18,7 +18,7 @@ gulp.task('clean-folders', function () {
     if (gulp.src(['app'], {domain: null})) {
 
         gulp.src([''], {domain: null})
-            .pipe(gulp.dest('app'))
+            .pipe(gulp.dest('app/**/*.*'))
             .pipe(clean())
             .pipe(gulp.dest('app/sass'))
             .pipe(clean())
@@ -107,9 +107,10 @@ gulp.task('fontawesome', function () {
 
 // Swipe Slider
 gulp.task('swipeslider', function () {
-    return gulp.src(['node_modules/swiper/dist//**/*.*'])
+    return gulp.src(['node_modules/swiper/dist/**/*.*'])
         .pipe(gulp.dest('app/vendor/swiper'))
 })
+
 
 // Copy all third party dependencies from node_modules to vendor directory
 gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome', 'swipeslider']);
