@@ -111,9 +111,15 @@ gulp.task('swipeslider', function () {
         .pipe(gulp.dest('app/vendor/swiper'))
 })
 
+// scrollanimation
+gulp.task('scrollanimation', function () {
+    return gulp.src(['node_modules/scrollanimation/**/*.*'])
+        .pipe(gulp.dest('app/vendor/scrollanimation'))
+})
+
 
 // Copy all third party dependencies from node_modules to vendor directory
-gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome', 'swipeslider']);
+gulp.task('copy', ['bootstrap', 'jquery', 'fontawesome', 'swipeslider', 'scrollanimation']);
 
 
 // Configure the browserSync task
