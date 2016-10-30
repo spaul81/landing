@@ -39,6 +39,9 @@ $(window).on('load', function () {
     setHeiHeight(); // устанавливаем высоту окна при первой загрузке страницы
     $(window).resize(setHeiHeight); // обновляем при изменении размеров окна
 
+    $('.is-animated').scrollAnimation({
+        animationDelay: ".0s"
+    });
 });
 
 // Sickly Header | scrollTop
@@ -79,9 +82,7 @@ $(document).ready(function () {
             return $("html, body").animate({scrollTop: 0}, 700), !1
         }).blur();
 
-    $('.is-animated').scrollAnimation({
-        animationDelay: ".0s"
-    });
+
 });
 
 

@@ -97,7 +97,7 @@ section.bg-main-color h2.section-heading:after {
 }
 #bg1{
   position: relative;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../img/background22.jpg) !important;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),  url(../img/bg.jpg) !important;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: center center;
@@ -289,7 +289,74 @@ html{
 .bg-main-color h3 {
   color: whitesmoke;
 }
+// Partpholio
+.gallery-grid img {
+  width: 100%;
+}
+.gallery-grid {
+  padding: 0;
+}
 
+.gallery1 .textbox {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  -webkit-transform: scale(0);
+  transform: scale(0);
+  background-color: $main_color_50;
+}
+.textbox {
+  -webkit-transition: all 0.7s ease;
+  transition: all 0.7s ease;
+  text-align: center;
+  color: #ffffff;
+}
+.textbox a{
+  color: #ffffff;
+}
+.textbox a:hover{
+  text-decoration: none;
+}
+.gallery1:hover .textbox {
+  -webkit-transform: scale(1);
+  transform: scale(1);
+}
+
+.textbox h4{
+  color: #ffffff;
+  margin-top: 115px;
+  font-size: 32px;
+}
+
+
+.bright-button, .bright-button:focus {
+  color: white !important;
+  //
+  //background: rgba(76, 76, 76, 0.1);
+  //background-color: $main_color;
+  border: 1px solid rgba(255, 255, 255, .5);
+  text-decoration: none;
+  padding: 8px 22px;
+  display: inline-block;
+  letter-spacing: 1px;
+  font-size: 14px;
+  font-width: 100;
+  font-family: "Roboto", Raleway, Helvetica, Arial !important;
+
+}
+
+.bright-button:hover {
+  background:rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(255, 255, 255,1);
+  color: #fff;
+  text-decoration: none;
+}
+// Contact
+section#contact .form-group textarea.form-control {
+  height: 132px;
+}
 // Footer
 footer {
   padding: 20px 0;
